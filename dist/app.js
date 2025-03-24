@@ -15,8 +15,9 @@ const productoRoutes_1 = __importDefault(require("./routes/productoRoutes"));
 const app = (0, express_1.default)();
 // Configuración de CORS
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://backendtaberna.vercel.app"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 // Middleware para manejar JSON

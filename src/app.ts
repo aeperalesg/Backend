@@ -30,9 +30,4 @@ app.use('/api/pr', productRoutes);
 app.use('/api/vs', productoRoutes);
 app.use("/api/images", imageRoutes); // Agregar la nueva ruta para imágenes
 
-// Puerto en el que se ejecuta la aplicación
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor en puerto ${PORT}`);
-});
 export default app; // 👈 Agrega esto

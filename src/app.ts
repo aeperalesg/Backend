@@ -12,7 +12,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173", "https://backendtaberna.vercel.app"],
+  origin: ["http://localhost:5173", "https://backendtaberna.vercel.app","https://www.licoreslatabernaperu.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true

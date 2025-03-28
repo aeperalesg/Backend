@@ -28,6 +28,6 @@ app.use("/api/payment", PaymentRoutes);
 app.use("/api/order", ordersRoutes);
 app.use('/api/pr', productRoutes);
 app.use('/api/vs', productoRoutes);
-app.use("/api/images", imageRoutes); // Agregar la nueva ruta para imágenes
+app.use("/api/images", imageRoutes);
 
 export default app; // 👈 Agrega esto

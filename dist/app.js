@@ -15,7 +15,7 @@ const productoRoutes_1 = __importDefault(require("./routes/productoRoutes"));
 const app = (0, express_1.default)();
 // Configuración de CORS
 app.use((0, cors_1.default)({
-    origin: ["http://localhost:5173", "https://backendtaberna.vercel.app"],
+    origin: ["http://localhost:5173", "https://backendtaberna.vercel.app", "https://www.licoreslatabernaperu.com"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
@@ -29,5 +29,9 @@ app.use("/api/payment", PaymentRoute_1.default);
 app.use("/api/order", ordersRoute_1.default);
 app.use('/api/pr', productRoutes_1.default);
 app.use('/api/vs', productoRoutes_1.default);
-app.use("/api/images", imageRoutes_1.default); // Agregar la nueva ruta para imágenes
+app.use("/api/images", imageRoutes_1.default);
 exports.default = app; // 👈 Agrega esto
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
